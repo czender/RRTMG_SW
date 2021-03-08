@@ -7815,8 +7815,11 @@ C     OUTPUT:
 C      A) ALTITUDE (KM)                                                         
 C      IDEAL GAS LAW: CRIDOR (1996)                                             
 C**************************************************************                 
-                                                                                
-      PARAMETER (MXFSC=600, MXLAY=MXFSC+3,MXZMD=4000,                           
+
+c csz++      
+c      PARAMETER (MXFSC=600, MXLAY=MXFSC+3,MXZMD=4000,                           
+      PARAMETER (MXFSC=600, MXLAY=MXFSC+3,MXZMD=2,                           
+c csz--
      *           MXPDIM=MXLAY+MXZMD,IM2=MXPDIM-2,MXMOL=39,MXTRAC=22)            
                                                                                 
       COMMON /IFIL/ IRD,IPR,IPU,NOPR,NFHDRF,NPHDRF,NFHDRL,NPHDRL,        FA00880
