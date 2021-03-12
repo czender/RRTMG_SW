@@ -10,8 +10,8 @@ SHELL  = /bin/sh
 ##############################################################
 
 #csz++
-# KGSRC = dat
-KGSRC = nc
+KGSRC = dat
+# KGSRC = nc
 #csz--
 
 ################################
@@ -55,14 +55,16 @@ ifeq ($(KGSRC),nc)
 #   FCOPTS = -fast -r8 -i8 -I$(INC_NETCDF)
 #   LDFLAGS = -L$(LIB_NETCDF) -lnetcdf
 #   FCOPTS = -O2 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -finteger-4-integer-8 -I$(INC_NETCDF)
-    FCOPTS = -O2 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -I$(INC_NETCDF)
-   LDFLAGS = -L$(LIB_NETCDF) -lnetcdf
+#    FCOPTS = -O2 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -I$(INC_NETCDF)
+    FCOPTS = -O2 -g -fno-align-commons -fdefault-double-8 -fdefault-integer-8 -I$(INC_NETCDF)
+   LDFLAGS = -L$(LIB_NETCDF) -lnetcdff -lnetcdf
 else
 #   FCOPTS = -fast -r8 -i8
    FCOPTS = -O2 -g -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8
 # Compile absorption coefficient data without optimization
 #   FCOPTK = -O0 -r8 -i8
-   FCOPTK = -O0 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -finteger-4-integer-8
+#   FCOPTK = -O0 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -finteger-4-integer-8
+   FCOPTK = -O0 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8
 endif
 #csz--
 
