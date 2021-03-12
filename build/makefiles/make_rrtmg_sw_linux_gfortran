@@ -50,7 +50,8 @@ FC = gfortran
 ifeq ($(KGSRC),nc)
 #   FCOPTS = -fast -r8 -i8 -I$(INC_NETCDF)
 #   LDFLAGS = -L$(LIB_NETCDF) -lnetcdf
-   FCOPTS = -O2 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -finteger-4-integer-8 -I$(INC_NETCDF)
+#   FCOPTS = -O2 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -finteger-4-integer-8 -I$(INC_NETCDF)
+    FCOPTS = -O2 -g -fno-align-commons -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -I$(INC_NETCDF)
    LDFLAGS = -L$(LIB_NETCDF) -lnetcdf
 else
 #   FCOPTS = -fast -r8 -i8
