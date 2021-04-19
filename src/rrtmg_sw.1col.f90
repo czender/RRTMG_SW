@@ -1673,6 +1673,7 @@
           print *, 'IEMIS = ', iemis, ' NOT A VALID INPUT VALUE'
           stop
       endif
+      print *,'csz semiss(1) = ',semiss(ib1),' emiss(14) = ',semiss(ib2)
      
 !  Read in extra records for EXP or ER cloud overlap
       if (icld .eq. 4 .or. icld .eq. 5) then
@@ -1870,7 +1871,9 @@
  9009 format (a1,1x,i2,i2,i2)
  9010 format (a1)
  9011 format (18x,i2,29x,i1,32x,i1,1x,i1,2x,i3,3x,i1,i1,3x,i1,i1)
- 9012 format (11x,i1,2x,i1,14f5.3)
+      ! csz
+      ! 9012 format (11x,i1,2x,i1,14f5.3)
+ 9012 format (11x,i1,2x,i1,14f7.5)
  9013 format (1x,i1,i3,i5)                                     
  9014 format (8x,i2)
  9015 format (f10.3)
