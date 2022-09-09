@@ -50,7 +50,7 @@ endif
 
 #csz++
 #FC = pgf90
-FC = gfortran
+FC = gfortran-12
 ifeq ($(KGSRC),nc)
 #   FCOPTS = -fast -r8 -i8 -I$(INC_NETCDF)
 #   LDFLAGS = -L$(LIB_NETCDF) -lnetcdf
