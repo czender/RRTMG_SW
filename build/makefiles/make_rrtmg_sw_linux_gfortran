@@ -1,5 +1,8 @@
 # $Id$
-# Makefile for rrtmg_sw - LINUX platform (PGI compiler)
+# csz++
+## Makefile for rrtmg_sw - LINUX platform (PGI compiler)
+# Makefile for rrtmg_sw - LINUX or MacOS platform (gfortran compiler)
+# csz--
 
 SHELL  = /bin/sh
 
